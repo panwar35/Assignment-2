@@ -60,12 +60,9 @@ input {
 .remember-me {
     display: flex;
     align-items: center;
-    margin-top: 10px;
-}
-
-.remember-me label {
-    margin-left: 5px;
-    font-size: 14px;
+    justify-content: right;
+    gap: 8px;
+    
 }
 
 .footer {
@@ -91,9 +88,6 @@ input {
 .forgot-password {
     font-size: 14px;
     text-decoration: none;
-    color: black;
+    color: rgb(21, 118, 214);
 }
 
-.forgot-password span {
-    color: blue;
-}
