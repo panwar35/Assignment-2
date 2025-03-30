@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Vertical Navigation Bar */
+.vertical-nav {
+    width: 200px;
+    border: 2px solid black;
+    background-color: lightblue;
+    padding: 5px;
+    text-align: left;
+    display: inline-block;
+}
+
+.vertical-nav a {
+    display: block;
+    color: blue;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.vertical-nav .active {
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+}
+
+/* Horizontal Navigation Bar */
+.horizontal-nav {
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+    padding: 5px;
+    border: 2px solid black;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.horizontal-nav a {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    color: blue;
+    border-right: 1px solid blue;
+}
+
+.horizontal-nav a:last-child {
+    border-right: none;
+}
+
+.horizontal-nav .active {
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Animation</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            color: navy;
+        }
+
+        .train-container {
+            position: relative;
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .train {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 200px; /* Adjust based on image size */
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="train-container">
+        <img src="https://i.pinimg.com/originals/b3/31/a4/b331a475d95d5ed5b491131f93e84d02.gif" class="train" id="train">
+    </div>
+
+    <h2>Click the following buttons to handle animation</h2>
+
+    <div class="buttons">
+        <button onclick="startTrain()">Start</button>
+        <button onclick="stopTrain()">Stop</button>
+    </div>
+
+    <script>
+        let train = document.getElementById("train");
+        let position = 0;
+        let interval;
+
+        function startTrain() {
+            if (!interval) {
+                interval = setInterval(() => {
+                    if (position < window.innerWidth) {
+                        position += 5; 
+                        train.style.left = position + "px";
+                    } else {
+                        position = -200; // Reset position
+                    }
+                }, 50);
+            }
+        }
+
+        function stopTrain() {
+            clearInterval(interval);
+            interval = null;
+        }
+    </script>
+
+</body>
+</html>

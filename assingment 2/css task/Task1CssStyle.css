@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Table Styling */
+table {
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 5px;
+    background-color: lightblue;
+    border: 2px solid black;
+    width: 60%; /* Increased width to elongate the table */
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 15px 30px; /* Increased padding to stretch horizontally */
+    text-align: center;
+    border-radius: 10px;
+}
+
+th {
+    font-weight: bold;
+}
+
+/* Shapes Section */
+.shapes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.shape {
+    width: 90px; /* Increased width */
+    height: 50px;
+    border: 2px solid green;
+    border-radius: 10px;
+}
+
+.oval {
+    width: 100px; /* Increased width */
+    height: 50px;
+    border: 2px solid green;
+    border-radius: 50%;
+}

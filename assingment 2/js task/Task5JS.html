@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 300px;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .error-input {
+            border: 2px solid red;
+        }
+        button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="myForm">
+        <label>Name:
+            <input type="text" id="name">
+            <span class="error" id="nameError"></span>
+        </label>
+
+        <label>Email:
+            <input type="email" id="email">
+            <span class="error" id="emailError"></span>
+        </label>
+
+        <label>Website:
+            <input type="url" id="website">
+            <span class="error" id="websiteError"></span>
+        </label>
+
+        <label>Message:
+            <textarea id="message" rows="4"></textarea>
+            <span class="error" id="messageError"></span>
+        </label>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            let isValid = true;
+
+            let name = document.getElementById("name");
+            let email = document.getElementById("email");
+            let website = document.getElementById("website");
+            let message = document.getElementById("message");
+
+            let nameError = document.getElementById("nameError");
+            let emailError = document.getElementById("emailError");
+            let websiteError = document.getElementById("websiteError");
+            let messageError = document.getElementById("messageError");
+
+            // Reset previous errors
+            nameError.textContent = "";
+            emailError.textContent = "";
+            websiteError.textContent = "";
+            messageError.textContent = "";
+
+            name.classList.remove("error-input");
+            email.classList.remove("error-input");
+            website.classList.remove("error-input");
+            message.classList.remove("error-input");
+
+            // Name validation
+            if (name.value.trim() === "") {
+                nameError.textContent = "This field is required";
+                name.classList.add("error-input");
+                isValid = false;
+            }
+
+            // Email validation
+            if (email.value.trim() === "") {
+                emailError.textContent = "A valid email address is required";
+                email.classList.add("error-input");
+                isValid = false;
+            } else if (!/\S+@\S+\.\S+/.test(email.value)) {
+                emailError.textContent = "Enter a valid email address";
+                email.classList.add("error-input");
+                isValid = false;
+            }
+
+            // Website validation
+            if (website.value.trim() === "") {
+                websiteError.textContent = "A valid URL is required";
+                website.classList.add("error-input");
+                isValid = false;
+            } else if (!/^https?:\/\/[^\s$.?#].[^\s]*$/.test(website.value)) {
+                websiteError.textContent = "Enter a valid URL starting with http:// or https://";
+                website.classList.add("error-input");
+                isValid = false;
+            }
+
+            // Message validation
+            if (message.value.trim() === "") {
+                messageError.textContent = "This field is required";
+                message.classList.add("error-input");
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

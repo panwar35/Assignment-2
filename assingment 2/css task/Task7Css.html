@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="Task7CssStyle.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="your email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other
+
+            <label for="language">Language:</label>
+            <select id="language">
+                <option>Select language</option>
+                <option>English</option>
+                <option>Hindi</option>
+                <option>French</option>
+            </select>
+
+            <label for="zipcode">Zip Code:</label>
+            <input type="text" id="zipcode" required>
+
+            <label for="about">About:</label>
+            <textarea id="about" placeholder="Write about yourself..."></textarea>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

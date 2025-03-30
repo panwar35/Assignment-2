@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: 300px;
+            margin: 50px auto;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #f5f5dc; /* Light beige button */
+            padding: 5px 10px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e0e0d1;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <table>
+            <tr>
+                <td>Full Name:</td>
+                <td><input type="text" value="Vincent Maverick Durano"></td>
+            </tr>
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" value="Vinz"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" value="********"></td>
+            </tr>
+            <tr>
+                <td>Re Password:</td>
+                <td><input type="password" value="********"></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><input type="text" value="Cebu, Philippines"></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="number" value="22"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <select>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit">Save</button></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
+

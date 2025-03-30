@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse a Number</title>
+</head>
+<body>
+    <h2>Reverse a Number</h2>
+    <input type="number" id="numInput" placeholder="Enter a number">
+    <button onclick="showReverse()">Reverse</button>
+    <p id="result"></p>
+
+    <script>
+        function reverseNumber(num) {
+            let reversed = parseInt(num.toString().split('').reverse().join('')) * Math.sign(num);
+            return reversed;
+        }
+
+        function showReverse() {
+            let inputVal = document.getElementById("numInput").value;
+            let reversed = reverseNumber(inputVal);
+            document.getElementById("result").innerText = "Reversed Number: " + reversed;
+        }
+    </script>
+</body>
+</html>
